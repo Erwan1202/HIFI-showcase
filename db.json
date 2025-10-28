@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Casque Aura Pro",
+      "category": "casques",
+      "price": 399.99,
+      "imageUrl": "https://source.unsplash.com/random/800x600?headphone",
+      "description": "Le Casque Aura Pro offre une isolation acoustique passive de premier ordre et une clarté audio sans compromis. Conçu pour les audiophiles exigeants, il combine des matériaux premium comme le cuir et l'aluminium brossé."
+    },
+    {
+      "id": 2,
+      "name": "Enceinte Murale Aura S",
+      "category": "enceintes",
+      "price": 1299.00,
+      "imageUrl": "https://source.unsplash.com/random/800x600?speaker",
+      "description": "Discrète mais puissante, l'enceinte murale Aura S s'intègre parfaitement à votre intérieur. Elle délivre un son riche et enveloppant, idéal pour les systèmes home-cinéma ou une écoute stéréo immersive."
+    },
+    {
+      "id": 3,
+      "name": "Ampli A-100",
+      "category": "amplis",
+      "price": 749.99,
+      "imageUrl": "https://source.unsplash.com/random/800x600?amplifier",
+      "description": "Le cœur de votre système. L'Ampli A-100 fournit une puissance stable de 100W par canal, avec une distorsion harmonique minimale. Connectivité complète incluant phono et entrées numériques."
+    },
+    {
+      "id": 4,
+      "name": "Casque Aura Mini",
+      "category": "casques",
+      "price": 199.99,
+      "imageUrl": "https://source.unsplash.com/random/800x600?earbuds",
+      "description": "Le compagnon de voyage idéal. Le Aura Mini offre la signature sonore Aura dans un format compact et léger, sans sacrifier la qualité."
+    },
+    {
+      "id": 5,
+      "name": "Platine Vinyle Aura V1",
+      "category": "platines",
+      "price": 499.00,
+      "imageUrl": "https://source.unsplash.com/random/800x600?turntable",
+      "description": "Redécouvrez votre collection de vinyles. L'Aura V1 est une platine manuelle à entraînement par courroie, équipée d'une cellule de haute qualité pour une lecture précise et chaleureuse."
+    },
+    {
+      "id": 6,
+      "name": "Enceinte Bibliothèque Aura B",
+      "category": "enceintes",
+      "price": 699.00,
+      "imageUrl": "https://source.unsplash.com/random/800x600?bookshelf+speaker",
+      "description": "Parfaites pour les petites et moyennes pièces, les Aura B délivrent un son étonnamment ample pour leur taille. Une scène sonore précise et des basses réactives."
+    }
+  ]
+}
