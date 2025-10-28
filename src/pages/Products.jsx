@@ -1,28 +1,54 @@
+import { useState, useEffect } from 'react';
+
 import ProductCard from '../components/ProductCard';
 
-// DONNÉES STATIQUES (seront remplacées par l'API plus tard)
-const staticProducts = [
-  { id: 1, name: "Casque Aura Pro", price: 399.99 },
-  { id: 2, name: "Enceinte Murale Aura S", price: 1299.00 },
-  { id: 3, name: "Ampli A-100", price: 749.99 },
-  { id: 4, name: "Casque Aura Mini", price: 199.99 },
-  { id: 5, name: "Platine Vinyle Aura V1", price: 499.00 },
-  { id: 6, name: "Enceinte Bibliothèque Aura B", price: 699.00 },
-];
-
 const Products = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // fetch products
+  useEffect(() => {
+
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/products');
+        if (!response.ok) {
+          throw new Error('Erreur lors de la récupération des produits');
+        }
+
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []); //On va eviter de s'appeler en boucle
+
+  if (loading) {
+    return <div className="text-center text-xl mt-12">Chargement des produits...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-xl mt-12 text-red-500">Erreur : {error}</div>;
+  }
+
   return (
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold text-center mb-12">Notre Catalogue</h1>
 
       {/* Grille de produits */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {staticProducts.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
   );
+
 };
 
 export default Products;
