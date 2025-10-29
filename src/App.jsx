@@ -13,7 +13,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 text-white">
+    <div className="flex flex-col min-h-screen bg-black text-white">
         <Navbar />
         <main className="flex-grow">
       <Routes>
