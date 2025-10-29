@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
+import ImagePlaceholderSEO from '../components/ImagePlaceHolderSEO';
+
 const ProductDetail = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL (ex: /produits/1)
   const [product, setProduct] = useState(null);
@@ -40,11 +42,12 @@ const ProductDetail = () => {
 
   return (
     <div className="container mx-auto p-8">
-      <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden md:flex">
-        <img 
-          src={product.imageUrl} 
-          alt={product.name} 
-          className="md:w-1/2 w-full object-cover" 
+      <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden md:flex">
+        <ImagePlaceholderSEO
+          alt={`Image principale de ${product.name}`}
+          width={600}
+          height={600}
+          className="md:w-1f/2 w-full object-cover"
         />
         <div className="p-8 md:w-1/2 flex flex-col justify-between">
           <div>
@@ -55,7 +58,7 @@ const ProductDetail = () => {
             </p>
           </div>
           <div>
-            <Link to="/produits" className="block mt-6 text-blue-400 hover:text-blue-300">
+            <Link to="/products" className="block mt-6 text-blue-400 hover:text-blue-300">
               &larr; Retour au catalogue
             </Link>
           </div>

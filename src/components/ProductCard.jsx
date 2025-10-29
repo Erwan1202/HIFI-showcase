@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
+import ImagePlaceholderSEO from './ImagePlaceHolderSEO';
 
-// Image temporaire
-const PlaceholderImg = 'https://via.placeholder.com/300x200.png?text=Product+Image';
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="bg-gray-800 rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-            {/* Image Section */}
-            <img 
-                src={product.imageUrl|| PlaceholderImg} 
-                alt={product.name} 
-                className="w-full h-48 object-cover"
+        <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+            <ImagePlaceholderSEO
+                alt={`Image de ${product.name}`}
+                width={400}
+                height={300}
+                className="w-full h-auto object-cover"
             />
 
             {/* Product Info Section */}

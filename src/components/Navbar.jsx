@@ -12,8 +12,8 @@ const Navbar = () => {
         {/* On ajoute aussi flex-col et md:flex-row ici */}
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
           <Link to="/" className="text-gray-300 hover:text-white">Accueil</Link>
-          <Link to="/produits" className="text-gray-300 hover:text-white">Produits</Link>
-          <Link to="/a-propos" className="text-gray-300 hover:text-white">À Propos</Link>
+          <Link to="/products" className="text-gray-300 hover:text-white">Produits</Link>
+          <Link to="/about" className="text-gray-300 hover:text-white">À Propos</Link>
           <Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link>
         </div>
       </div>
