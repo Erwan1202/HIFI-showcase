@@ -1,4 +1,4 @@
-const ImagePlaceholderSEO = ({ alt, width, height, className = "" }) => {
+const ImagePlaceHolderSEO = ({ alt, width, height, className = "" }) => {
   const placeholderSrc = `https://via.placeholder.com/${width}x${height}.png?text=Aura+Audio`;
 
   return (
@@ -12,4 +12,4 @@ const ImagePlaceholderSEO = ({ alt, width, height, className = "" }) => {
     />
   );
 };
-export default ImagePlaceholderSEO;
+export default ImagePlaceHolderSEO;
