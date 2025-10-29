@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 import ImagePlaceholderSEO from './ImagePlaceHolderSEO';
 
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+        <motion.div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <ImagePlaceholderSEO
                 alt={`Image de ${product.name}`}
                 width={400}
@@ -22,7 +28,7 @@ const ProductCard = ({ product }) => {
                     Voir Détails
                     </Link>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
