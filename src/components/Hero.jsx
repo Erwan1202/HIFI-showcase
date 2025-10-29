@@ -1,4 +1,5 @@
-// ... imports
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <div className="bg-gray-800 text-white">
@@ -11,7 +12,12 @@ const Hero = () => {
         <p className="text-lg md:text-2xl text-gray-300 mb-8 max-w-2xl">
           Découvrez notre sélection d'équipements Hi-Fi d'exception...
         </p>
-        {/* ... le bouton Link ... */}
+        <Link 
+          to="/products" 
+          className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out"
+        >
+          Voir le catalogue
+        </Link>
       </div>
     </div>
   );
